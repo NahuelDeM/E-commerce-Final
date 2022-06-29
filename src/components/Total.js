@@ -31,7 +31,7 @@ const Total = () => {
         to='/checkout'
         className={classes.button}
         variant='contained'
-        color='secondary'
+        color='primary'
       >
         Check out
       </Button>

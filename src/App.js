@@ -10,6 +10,7 @@ import { actionTypes } from "./reducer";
 import Checkout from "./components/ProcessOrder/Checkout";
 import Products from "./Pages/Products";
 import CheckoutPage from "./Pages/CheckoutPage";
+import HeroSection from "./components/HeroSection";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -35,12 +36,16 @@ function App() {
     <Router>
       <div className='app'>
         <Navbar />
+        <HeroSection />
         <Switch>
           <Route path='/signup'>
             <SignUp />
           </Route>
           <Route path='/signin'>
             <SignIn />
+          </Route>
+          <Route path='/home'>
+            <HeroSection />
           </Route>
           <Route path='/checkout-page'>
             <CheckoutPage />
