@@ -3,7 +3,7 @@ import AppBar from "@material-ui/core/AppBar";
 import Toolbar from "@material-ui/core/Toolbar";
 import Typography from "@material-ui/core/Typography";
 import IconButton from "@material-ui/core/IconButton";
-import logo from "../assets/cuttevents.png";
+import LogoShrekNegro from "../imagenes/LogoShrekNegro.png";
 import { Badge, Button, CssBaseline } from "@material-ui/core";
 import { ShoppingCart } from "@material-ui/icons";
 import { useStateValue } from "../StateProvider";
@@ -25,6 +25,7 @@ const useStyles = makeStyles((theme) => ({
   },
   button: {
     marginLeft: theme.spacing(2),
+    backgroundColor: "primary",
   },
   image: {
     marginRight: "10px",
@@ -56,7 +57,7 @@ const Navbar = () => {
             <Link to='/'>
               <IconButton>
                 <img
-                  src={logo}
+                  src={LogoShrekNegro}
                   alt='Commerce.js'
                   height='25px'
                   className={classes.image}
@@ -65,20 +66,20 @@ const Navbar = () => {
             </Link>
 
             <div className={classes.grow} />
-            <Typography variant='h6' color='textPrimary' component='p'>
-              Hello {user ? user.email : "Guest"}
+            <Typography variant='h6' color='textSecondary' component='p'>
+              Hola {user ? user.email : "Mateos"}
             </Typography>
-            <div className={classes.button}>
+            <div className={classes.button} >
               <Link to={!user && "/signin"}>
-                <Button onClick={handleAuth} variant='outlined'>
+                <Button onClick={handleAuth} >
                   <strong>{user ? "Sign Out" : "Sign In"}</strong>
                 </Button>
               </Link>
 
               <Link to='/checkout-page'>
                 <IconButton aria-label='show cart items' color='inherit'>
-                  <Badge badgeContent={basket?.length} color='secondary'>
-                    <ShoppingCart fontSize='large' color='primary' />
+                  <Badge badgeContent={basket?.length} color='secondary.light'>
+                    <ShoppingCart fontSize='large' color='secondary.light' />
                   </Badge>
                 </IconButton>
               </Link>

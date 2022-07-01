@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
@@ -64,7 +65,7 @@ export default function Product({
   };
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} id="carta">
       <CardHeader
         action={
           <Typography
@@ -72,11 +73,10 @@ export default function Product({
             variant='h5'
             color='textSecondary'
           >
-            {accounting.formatMoney(price, "€")}
+            {accounting.formatMoney(price, "$")}
           </Typography>
         }
         title={name}
-        subheader='in Stock'
       />
       <CardMedia className={classes.media} image={image} title={name} />
       <CardContent>
@@ -85,8 +85,11 @@ export default function Product({
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon fontSize='medium'/>
+        </IconButton>
         <IconButton aria-label='Add to Cart' onClick={addToBasket}>
-          <AddShoppingCart fontSize='large' />
+          <AddShoppingCart fontSize='medium' />
         </IconButton>
         {Array(rating)
           .fill()
