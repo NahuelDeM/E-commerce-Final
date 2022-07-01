@@ -1,24 +1,37 @@
 import React from 'react';
 import { MDBFooter } from 'mdb-react-ui-kit';
+import 'bootstrap/dist/css/bootstrap.min.css';
 
 export default function App() {
   return (
-    <MDBFooter bgColor='light' className='text-center text-l'>
-      <div className='text-center p-3' style={{ backgroundColor: 'rgba(0, 0, 0, 0.2)' }}>
-        &copy; {new Date().getFullYear()} Copyright:{' '}
-        <a className='text-dark' href='https://mdbootstrap.com/'>
-          Creado Para Matea
-        </a>
-        <li>
+    <MDBFooter className='background-color' > 
+     
+    <div class='mx-auto style=width:600px'>
+        <label for="exampleFormControlInput1" class="form-label">Escriba su email</label>
+        <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="name@example.com"></input>
+        <label for="exampleFormControlTextarea1" class="form-label">Escriba su consulta</label>
+        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+      <button className="bg-primary btn btn-primary btn-block">enviar</button>
+    </div>
+
+    <div>
+        <li className='text-success d-flex justify-content-between  font-size  30px'>
             Nahuel Velazques
         </li>
-        <li>
+        <li className='text-success d-flex justify-content-between font-size: 30px'>
             Tamara 
         </li>
-        <li>
-            Franco Duartes
+        <li className="text-success d-flex justify-content-between font-size: 30px">
+            Franco Duarte
         </li>
-      </div>
+    </div>
+
+        <a className='text-danger d-flex justify-content-end Danger link'>
+          <p class="text-danger">Creado Para Matea</p>
+        </a>
+  
     </MDBFooter>
   );
+
+  
 }
