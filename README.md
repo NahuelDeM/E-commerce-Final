@@ -21,7 +21,7 @@ Stripe
 React-lazy-hero
 React-Router
 
-#Proyecto Creado por:
+# Proyecto Creado por:
 Tamara, Nahuel, Franco.
 
 ### Estado:
