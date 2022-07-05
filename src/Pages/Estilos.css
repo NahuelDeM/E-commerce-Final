@@ -74,3 +74,14 @@ form input {
       text-decoration: none;
       padding-top: 12px;
 }
+.abitab {
+    max-width: 150px;
+}
+
+.redpagos {
+    max-width: 150px;
+}
+
+.tick {
+    max-width: 600px;
+}

@@ -4,7 +4,7 @@ const products = [
     name: "Justin bieber",
     productType: "Musica",
     price: 2500,
-    rating: 6,
+    rating: 3,
     image:
     "https://wallpapershome.com/images/pages/pic_h/14502.jpg",
     description:
@@ -125,7 +125,7 @@ const products = [
     name: "Sextillizos",
     productType: "Cine",
     price: 1200,
-    rating: 10,
+    rating: 4,
     image:
       "https://cdn.themedizine.com/2019/08/sextillizos-netflix-cover-1000x667.jpg",
     description:

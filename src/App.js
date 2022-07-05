@@ -13,6 +13,7 @@ import HeroSection from "./components/HeroSection";
 import PaymentForms from "./Pages/PaymentForms";
 import Gracias from "./Pages/Gracias";
 import Elegir from "./Pages/Elegir";
+import Deposito from "./Pages/Deposito";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -45,6 +46,9 @@ function App() {
           </Route>
           <Route path='/Gracias'>
             <Gracias />
+          </Route>
+          <Route path="/Deposito">
+            <Deposito />
           </Route>
           <Route path='/signin'>
             <SignIn />
