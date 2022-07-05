@@ -7,6 +7,7 @@ import CardContent from "@material-ui/core/CardContent";
 import CardActions from "@material-ui/core/CardActions";
 import Collapse from "@material-ui/core/Collapse";
 import IconButton from "@material-ui/core/IconButton";
+import FavoriteIcon from '@material-ui/icons/Favorite';
 import Typography from "@material-ui/core/Typography";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
 import { makeStyles } from "@material-ui/core/styles";
@@ -25,6 +26,7 @@ const useStyles = makeStyles((theme) => ({
   media: {
     height: 0,
     paddingTop: "56.25%", // 16:9
+    fontFamily: 'Poppins'
   },
   expand: {
     transform: "rotate(0deg)",
@@ -64,7 +66,7 @@ export default function Product({
   };
 
   return (
-    <Card className={classes.root}>
+    <Card className={classes.root} id="carta">
       <CardHeader
         action={
           <Typography
@@ -72,7 +74,7 @@ export default function Product({
             variant='h5'
             color='textSecondary'
           >
-            {accounting.formatMoney(price, "€")}
+            {accounting.formatMoney(price, "$")}
           </Typography>
         }
         title={name}
@@ -85,8 +87,11 @@ export default function Product({
         </Typography>
       </CardContent>
       <CardActions disableSpacing>
+        <IconButton aria-label="add to favorites">
+          <FavoriteIcon fontSize='medium'/>
+        </IconButton>
         <IconButton aria-label='Add to Cart' onClick={addToBasket}>
-          <AddShoppingCart fontSize='large' />
+          <AddShoppingCart fontSize='medium' />
         </IconButton>
         {Array(rating)
           .fill()

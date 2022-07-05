@@ -7,9 +7,12 @@ import SignUp from "./components/Signup";
 import { auth } from "./firebase";
 import { useStateValue } from "./StateProvider";
 import { actionTypes } from "./reducer";
-import Checkout from "./components/ProcessOrder/Checkout";
 import Products from "./Pages/Products";
 import CheckoutPage from "./Pages/CheckoutPage";
+import HeroSection from "./components/HeroSection";
+import PaymentForms from "./Pages/PaymentForms";
+import Gracias from "./Pages/Gracias";
+import Elegir from "./Pages/Elegir";
 
 function App() {
   const [{ user }, dispatch] = useStateValue();
@@ -35,18 +38,28 @@ function App() {
     <Router>
       <div className='app'>
         <Navbar />
+        <HeroSection />
         <Switch>
           <Route path='/signup'>
             <SignUp />
           </Route>
+          <Route path='/Gracias'>
+            <Gracias />
+          </Route>
           <Route path='/signin'>
             <SignIn />
+          </Route>
+          <Route path='/home'>
+            <HeroSection />
           </Route>
           <Route path='/checkout-page'>
             <CheckoutPage />
           </Route>
+          <Route path='/Elegir'>
+            <Elegir />
+          </Route>
           <Route path='/checkout'>
-            <Checkout />
+            <PaymentForms />
           </Route>
           <Route path='/'>
             <Products />

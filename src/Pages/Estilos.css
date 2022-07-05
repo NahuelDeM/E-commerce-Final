@@ -1,0 +1,76 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+form {
+    text-align: center;
+    padding-top: 20px;
+}
+
+label {
+    padding-left: 8px;
+    padding-right: 8px;
+    font-size: 15px;
+    color: #444;
+}
+form input {
+      width: 260px;
+      height: 30px;
+      padding-left: 10px;
+      padding-top: 3px;
+      padding-bottom: 3px;
+      margin: 7px;
+      font-size: 17px;
+      border-radius: 20px;
+      background: rgba(0,0,0,0.05);
+      border: none;
+      transition: background 0.5s;
+}
+
+.card {
+    padding-top: 20px;
+}
+
+.btnpagar {
+    width: 260px;
+      height: 50px;
+      position: relative;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      border: none;
+      background: #42C2DF;
+      color: white;
+      font-size: 20px;
+      transition: background 0.4s;
+      cursor: pointer;
+      text-decoration: none;
+      padding-top: 12px;
+}
+
+.Wos {
+    text-align: center;
+    font-size: 30px;
+    margin-top: 50px;
+    margin-bottom: 50px;
+}
+
+.btninicio {
+    text-decoration: none;
+    width: 260px;
+      height: 50px;
+      position: relative;
+      display: block;
+      margin: 20px auto;
+      border-radius: 10px;
+      border: none;
+      background: #42C2DF;
+      color: white;
+      font-size: 20px;
+      transition: background 0.4s;
+      cursor: pointer;
+      text-decoration: none;
+      padding-top: 12px;
+}
